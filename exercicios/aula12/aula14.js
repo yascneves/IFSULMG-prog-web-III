@@ -15,30 +15,18 @@ function maiorNumero(a, b) {
 console.log(maiorNumero(a, b));
 
 
-// 2
-function fatorial(n) {
-    if (n < 0) return "Número inválido para fatorial.";
-    let resultado = 1;
-    for (let i = 2; i <= n; i++) {
-        resultado *= i;
-    }
-    return resultado;
-}
-console.log(fatorial(n));
-
-
 // 3
 function parImpar(n) {
     return n % 2 === 0 ? "Par" : "Ímpar";
 }
-console.log(parOuImpar(n));
+console.log(parOuImpar(5));
 
 
 // 4
 function celsiusToFahrenheit(celsius) {
     return (celsius * 9/5) + 32;
 }
-console.log(celsiusParaFahrenheit(celsius));
+console.log(celsiusParaFahrenheit(20));
 
 
 
@@ -53,7 +41,7 @@ function contarVogais(str) {
     }
     return contador;
 }
-console.log(contarVogais);
+console.log(contarVogais("aiueoppp"));
 
 
 
