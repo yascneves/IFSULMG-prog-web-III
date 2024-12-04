@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link para o CSS -->
+</head>
+<body>
+    <div class="container-calculator">
+        <ul>
+            <li><a href="/aulaProgWeb/calculadoraTrabalho/login.php?tipo_calculadora=1"><button>Comum</button></a></li>
+            <li><a href="/aulaProgWeb/calculadoraTrabalho/login.php?tipo_calculadora=2"><button>Programador</button></a></li>
+            <li><a href="/aulaProgWeb/calculadoraTrabalho/login.php"><button class="sair">Sair</button></a></li>
+        </ul>
+        <div class="calculator">
+            <!-- Visor da calculadora, onde os números e resultados aparecem -->
+            <input type="text" id="display" disabled>
+            <!-- Botões da calculadora para números, operadores e funções -->
+            <div class="buttons-cientifica">
+                <button onclick="clearDisplay()">C</button> <!-- Limpa o visor -->
+                <button onclick="deleteLast()">⌫</button> <!-- Apaga o último dígito -->
+                <button onclick="appendNumber('Math.PI')">&pi;</button> <!-- pi -->
+                <button onclick="appendNumber('Math.e')">e</button> <!-- euler -->
+                <button onclick="englobeFunction('modulo')">|x|</button> <!-- modulo -->
+                <button onclick="appendNumber('(')">(</button> <!-- parentese  -->
+                <button onclick="appendNumber(')')">)</button> <!-- parentese -->
+                <button onclick="englobeFunction('sen')">sen(x)</button> <!-- modulo -->
+                <button onclick="englobeFunction('cos')">cos(x)</button> <!-- modulo -->
+                <button onclick="englobeFunction('tg')">tg(x)</button> <!-- modulo -->
+                <button onclick="appendOperator('/')">÷</button> <!-- Divisão -->
+                <button onclick="appendOperator('*')">×</button> <!-- Multiplicação -->
+                <button onclick="appendOperator('**')">^</button> <!-- Botão de potência (exemplo 2^3) -->
+                <button onclick="sqrt()">√</button> <!-- Botão de raiz quadrada -->
+                <button onclick="percentage()">%</button> <!-- Botão de porcentagem -->
+                <button onclick="inverse()">1/x</button> <!-- Botão de inverso (1/x) -->
+                <button onclick="appendNumber('7')">7</button>
+                <button onclick="appendNumber('8')">8</button>
+                <button onclick="appendNumber('9')">9</button>
+                <button onclick="appendOperator('-')">-</button> <!-- Subtração -->
+                <button onclick="appendNumber('4')">4</button>
+                <button onclick="appendNumber('5')">5</button>
+                <button onclick="appendNumber('6')">6</button>
+                <button onclick="appendOperator('+')">+</button> <!-- Adição -->
+                <button onclick="appendNumber('1')">1</button>
+                <button onclick="appendNumber('2')">2</button>
+                <button onclick="appendNumber('3')">3</button>
+                <button onclick="calculate()">=</button> <!-- Calcula o resultado -->
+                <button onclick="appendNumber('0')">0</button>
+                <button onclick="appendNumber('.')">.</button> <!-- Decimal -->
+            </div>
+        </div>
+        
+    </div>
+    <script src="script.js"></script> <!-- Link para o JavaScript -->
+</body>
+</html>
